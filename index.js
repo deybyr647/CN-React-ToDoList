@@ -55,15 +55,24 @@ class App extends React.Component {
 
   onTodoListItemToggle(id) {
     // TODO(#13) Deep copy the state.
+    const nextState = cloneDeep(this.state);
 
     // TODO(#14) Find the todo that matches the id.
     // If there is no matched todo, do nothing.
     // hint: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
-
+    const todo = nextState.todos.find(t => t.id === id)
+    if(!todo){
+      return;
+    }
+    
     // TODO(#15) Update the matched todo's isComplete property
     // to be the opposite of what it is currently set.
 
+    todo.isComplete = !todo.isComplete;
+
     // TODO(#16) Set the next state.
+
+    this.State(nextState)
   }
 
   onTodoListItemRemove(id) {
