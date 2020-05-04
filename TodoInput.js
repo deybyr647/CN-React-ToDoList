@@ -16,10 +16,10 @@ export default class TodoInput extends React.Component {
   onChange(event) {
     // Deep copy the state.
     const nextState = cloneDeep(this.state);
-
+    
     // TODO(#8) Set the nextState.value to be
     // the event.target.value.
-
+    nextState.value = event.target.value
     // Set the next state.
     this.setState(nextState);
   }
