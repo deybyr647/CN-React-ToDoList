@@ -60,7 +60,7 @@ class App extends React.Component {
     // TODO(#14) Find the todo that matches the id.
     // If there is no matched todo, do nothing.
     // hint: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
-    const todo = nextState.todos.find(t => t.id === id)
+    const todo = nextState.todos.find(todo => todo.id === id)
     if(!todo){
       return;
     }
@@ -72,7 +72,7 @@ class App extends React.Component {
 
     // TODO(#16) Set the next state.
 
-    this.State(nextState)
+    this.setState(nextState)
   }
 
   onTodoListItemRemove(id) {
@@ -85,10 +85,10 @@ class App extends React.Component {
     // that matches given id.
     // hint: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
-    nextState.todos = nextState.todos.filter(t => t.id !== id);
-    
+    nextState.todos = nextState.todos.filter(todo => todo.id !== id);
+
     // TODO(#23) Set the next state.
-    this.State(nextState)
+    this.setState(nextState)
   }
 
   render() {
