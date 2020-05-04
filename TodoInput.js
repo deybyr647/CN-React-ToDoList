@@ -35,7 +35,6 @@ export default class TodoInput extends React.Component {
     }
 
     // TODO(#9) Call this.props.onEnter with this.state.value.
-
     this.props.onEnter(this.state.value);
     
     // TODO(#10) Deep copy the state.

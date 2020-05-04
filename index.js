@@ -86,9 +86,7 @@ class App extends React.Component {
     // hint: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
     nextState.todos = nextState.todos.filter(t => t.id !== id);
-
-
-
+    
     // TODO(#23) Set the next state.
     this.State(nextState)
   }
